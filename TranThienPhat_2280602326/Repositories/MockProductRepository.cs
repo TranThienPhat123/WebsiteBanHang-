@@ -11,7 +11,9 @@ namespace TranThienPhat_2280602326.Repositories
             // Tạo một số dữ liệu mẫu
             _products = new List<Product>
             {
-                new Product { Id = 1, Name = "Laptop", Price = 1000, Description = "A high-end laptop" },
+                new Product { Id = 1, Name = "Laptop", Price = 5000, Description = "A high-end laptop" },
+                new Product { Id = 2, Name = "Laptop", Price = 6000, Description = "A medium-end laptop" },
+                new Product { Id = 3, Name = "Laptop", Price = 3000, Description = "A low-end laptop" },
             };
         }
         public IEnumerable<Product> GetAll()
@@ -35,7 +37,7 @@ namespace TranThienPhat_2280602326.Repositories
                 _products[index] = product;
             }
         }
-        public void Delete(int id)
+        public void Delete(int id)  
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
