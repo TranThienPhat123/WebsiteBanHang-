@@ -126,4 +126,15 @@ namespace TranThienPhat_2280602326.Controllers
             return RedirectToAction("Index");
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+    // Xử lý xóa sản phẩm
+    [HttpPost, ActionName("DeleteConfirmed")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        await _productRepository.DeleteAsync(id);
+        return RedirectToAction(nameof(Index));
+    }
+}..
+>>>>>>> Stashed changes
